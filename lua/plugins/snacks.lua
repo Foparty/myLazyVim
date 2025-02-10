@@ -55,6 +55,13 @@ return {
         desc = "Buffers",
       },
       {
+        "<leader>nh",
+        function()
+          Snacks.notifier.show_history()
+        end,
+        desc = "Notification History",
+      },
+      {
         "<leader>.",
         false,
       },
