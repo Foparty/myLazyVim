@@ -1,15 +1,5 @@
 return {
   {
-    "folke/which-key.nvim",
-    opts = {
-      preset = "modern",
-      sort = {
-        by = "key",
-        order = "asc",
-      },
-    },
-  },
-  {
     "saghen/blink.cmp",
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
