@@ -1,6 +1,5 @@
 -- lazy.nvim
 return {
-
   {
     "folke/snacks.nvim",
     ---@type snacks.Config
@@ -9,6 +8,7 @@ return {
         replace_netrw = true,
       },
       picker = {
+
         layout = {
           -- fullscreen = true,
           cycle = false,
@@ -22,6 +22,9 @@ return {
         },
         sources = {
           explorer = {
+            -- hidden = true,
+            -- ignored = true,
+            -- exclude = { ".git" },
             auto_close = true,
             layout = {
               layout = {
