@@ -25,7 +25,7 @@ return {
             -- hidden = true,
             -- ignored = true,
             -- exclude = { ".git" },
-            auto_close = true,
+            auto_close = false,
             layout = {
               layout = {
                 width = 0.2,
