@@ -27,7 +27,7 @@ map("n", "<C-a>", "gg<S-v>G", { desc = "Select all text" })
 --WARN: here are the disabled ones.
 --
 del("n", "<leader>-")
-del("n", "<leader>fn")
+-- del("n", "<leader>fn")
 -- NOTE: here goes custom mappins for creating new external documents
 vim.api.nvim_create_user_command("CreateNewNote", function()
   -- Prompt for a custom filename

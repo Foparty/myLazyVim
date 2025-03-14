@@ -65,6 +65,20 @@ return {
         desc = "Notification History",
       },
       {
+        "<leader>fn",
+        function()
+          Snacks.picker.files({ cwd = "~/notes/" })
+        end,
+        desc = "Find Notes",
+      },
+      {
+        "<leader>fm",
+        function()
+          Snacks.picker.grep({ cwd = "~/notes/" })
+        end,
+        desc = "Grep Notes",
+      },
+      {
         "<leader>.",
         false,
       },
