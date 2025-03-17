@@ -32,4 +32,13 @@ return {
       -- vim.cmd.colorscheme("lackluster-mint")
     end,
   },
+  {
+    "olivercederborg/poimandres.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("poimandres").setup({})
+    end,
+  },
+  { "datsfilipe/vesper.nvim" },
 }
