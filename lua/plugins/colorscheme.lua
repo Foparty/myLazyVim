@@ -2,43 +2,25 @@ return {
   {
     "folke/tokyonight.nvim",
     opts = {
-      transparent = true,
+      transparent = false,
       styles = {
         sidebars = "transparent",
         floats = "transparent",
       },
     },
   },
+
   {
-    -- https://github.com/catppuccin/nvim
-    "catppuccin/nvim",
-    enabled = true,
-    name = "catppuccin",
-    priority = 1000,
+    -- https://github.com/projekt0n/github-nvim-theme
+    "projekt0n/github-nvim-theme",
+    name = "github-theme",
     config = function()
-      require("catppuccin").setup({
-        transparent_background = true,
+      require("github-theme").setup({
+        options = {
+          transparent = true,
+        },
       })
-      -- vim.cmd.colorscheme("catppuccin")
-    end,
-  }, -- example lazy.nvim install setup
-  {
-    "slugbyte/lackluster.nvim",
-    lazy = false,
-    priority = 1000,
-    init = function()
-      -- vim.cmd.colorscheme("lackluster")
-      -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
-      -- vim.cmd.colorscheme("lackluster-mint")
     end,
   },
-  {
-    "olivercederborg/poimandres.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("poimandres").setup({})
-    end,
-  },
-  { "datsfilipe/vesper.nvim" },
+  { "ellisonleao/gruvbox.nvim" },
 }
