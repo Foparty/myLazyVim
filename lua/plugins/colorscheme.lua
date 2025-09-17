@@ -22,5 +22,20 @@ return {
       })
     end,
   },
+  {
+    -- https://github.com/zenbones-theme/zenbones.nvim
+    "zenbones-theme/zenbones.nvim",
+    dependencies = "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.g.zenbones = {
+        transparent_background = true,
+        italic_comments = true,
+        -- Options: 'zenbones', 'zenwritten', 'zenburned', 'nordbones', 'forestbones', 'tokyobones', 'rosenones', 'vimbones', 'neobones', 'seoulbones' or 'duckbones'
+        variant = "zenbones",
+      }
+    end,
+  },
   { "ellisonleao/gruvbox.nvim" },
 }

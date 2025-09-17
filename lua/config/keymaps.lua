@@ -5,29 +5,38 @@
 local map = vim.keymap.set
 local del = vim.keymap.del
 map("i", "kj", "<esc><cmd>up<cr>", { desc = "exit inset mode and save file" })
-map("n", ";", ":", { desc = "Use semicolon as colon" })
-map("n", "<leader>sf", ":so %<CR>", { desc = "Source current file" })
+-- map("n", ";", ":", { desc = "Use semicolon as colon" })
+map("n", "<leader>so", ":so %<CR>", { desc = "Source current file" })
 
 map("n", "<up>", ":close<cr>", { desc = "close current file" })
+map("n", "<c-q>", ":close<cr>", { desc = "close current file" })
 map("n", "<left>", "<cmd>up!<cr>", { desc = "save current file" })
 map("n", "<right>", "<C-w>v", { desc = "Split window vertically" })
 map("n", "<down>", "<C-w>s", { desc = "Split window horizontally" })
 
-map("n", "n", "nzzzv", { desc = "next search result and center" })
-map("n", "N", "Nzzzv", { desc = "previous search result and center" })
+map("n", "<leader>rf", vim.lsp.buf.format, { desc = "[R]e[F]ormat buffer" })
+
+map("n", "n", "nzzzv", { desc = "Next search result and center" })
+map("n", "N", "Nzzzv", { desc = "Previous search result and center" })
+map("n", "j", "jzzzv", { desc = "j centeker" })
+map("n", "k", "kzzzv", { desc = "k center" })
+
 map("n", "<c-d>", "<c-d>zz", { desc = "scroll down half page and center" })
 map("n", "<c-u>", "<c-u>zz", { desc = "scroll up half page and center" })
 map("n", "<c-f>", "<c-f>zz", { desc = "scroll down full page and center" })
 map("n", "<c-b>", "<c-b>zz", { desc = "scroll up full page and center" })
 
-map("n", "<C-]>", "<cmd>cnext<CR>", { desc = "Go to next quickfix item" })
-map("n", "<C-[>", "<cmd>cprev<CR>", { desc = "Go to previous quickfix item" })
-map("n", "<C-a>", "gg<S-v>G", { desc = "Select all text" })
+map("n", "<C-s>", "gg<S-v>G", { desc = "Select all text" })
+
+map("n", "D", function()
+  vim.diagnostic.open_float()
+end, { desc = "diagnostic hover" })
 
 --WARN: here are the disabled ones.
 --
 del("n", "<leader>-")
 -- del("n", "<leader>fn")
+
 -- NOTE: here goes custom mappins for creating new external documents
 vim.api.nvim_create_user_command("CreateNewNote", function()
   -- Prompt for a custom filename
